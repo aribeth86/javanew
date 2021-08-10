@@ -4,13 +4,13 @@ public class FirstTest1 {
 
     public static void main(String[] args) {
         //создаю экземпляр класса корабля
-        StarShip ship = new StarShip();
+        StarShip ship = new StarShip(253.25);
+        displayHeight(ship);
 
-        //задаю конкретному кораблю конкретное свойство
-        ship.shipHeight = 253.25;
-    }
-    public static void displayHeight(StarShip ourship) {
-        System.out.println("Высота корабля составляет : "+ourship.shipHeight);
-    }
 
+    }
+    public static void displayHeight(StarShip ship) {
+        System.out.println("Высота корабля составляет : "+getStarShipHeight (ship));
+    }
+    public static double getStarShipHeight(StarShip ship) {return  ship.shipHeight;}
 }
